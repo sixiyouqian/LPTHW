@@ -12,6 +12,10 @@ $ git config --global user.email "wangluzhou@aliyun.com"
 # 测试ssh
 ssh -T git@github.com
 ```
+mac上测试时如果出现权限不足的问题，需要输入下面的命令：
+```shell
+ssh-add <你的ssh名称>
+```
 ## git版本管理步骤
 ### 1. 初始化你的本地仓库
 ```shell
@@ -26,7 +30,7 @@ git add .
 ```
 git commit -m "XXXXX"
 ```
-### 4. 添加远程库
+### 4. 添加远程库(这个只要在第一次上传的时候输入即可，相当于注册信息)
 ```
 git remote add origin "git@github.com:wangluzhou/your-repository-name"
 ```
@@ -34,7 +38,7 @@ git remote add origin "git@github.com:wangluzhou/your-repository-name"
 ```
 git push -u origin master
 ```
-### 跟新
+### 6. 更新
 ```
 git pull
 ```
